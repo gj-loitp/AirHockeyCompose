@@ -1,8 +1,6 @@
 package com.dbtechprojects.airhockey
 
-import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.*
@@ -18,7 +16,6 @@ import com.dbtechprojects.airhockey.ui.shared.GameTypeState
 import com.dbtechprojects.airhockey.ui.theme.AirHockeyComposeTheme
 import com.dbtechprojects.airhockey.ui.twoPlayerLocal.TwoPlayerGameBoard
 import com.dbtechprojects.airhockey.ui.twoPlayerLocal.twoPlayerLocalState
-import com.google.android.gms.security.ProviderInstaller
 
 
 class MainActivity : ComponentActivity() {
@@ -32,13 +29,13 @@ class MainActivity : ComponentActivity() {
 
         //Install ssl if needed
         // https://stackoverflow.com/questions/53583016/api-call-on-android-19-emulator-isconnected-failed-ehostunreach-no-route-to
-        ProviderInstaller.installIfNeededAsync(this, object :
-            ProviderInstaller.ProviderInstallListener {
-            override fun onProviderInstalled() {}
-            override fun onProviderInstallFailed(i: Int, intent: Intent?) {
-                Log.i("main", "Provider install failed ($i) : SSL Problems may occurs")
-            }
-        })
+//        ProviderInstaller.installIfNeededAsync(this, object :
+//            ProviderInstaller.ProviderInstallListener {
+//            override fun onProviderInstalled() {}
+//            override fun onProviderInstallFailed(i: Int, intent: Intent?) {
+//                Log.i("main", "Provider install failed ($i) : SSL Problems may occurs")
+//            }
+//        })
         setContent {
             AirHockeyComposeTheme {
                 // A surface container using the 'background' color from the theme
