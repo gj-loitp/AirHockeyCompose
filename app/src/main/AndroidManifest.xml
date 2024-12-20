@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.dbtechprojects.airhockeycompose">
+    package="com.dbtechprojects.airhockey">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
@@ -13,7 +13,7 @@
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.AirHockeyCompose">
         <activity
-            android:name=".MainActivity"
+            android:name="com.dbtechprojects.airhockey.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.AirHockeyCompose.NoActionBar">
